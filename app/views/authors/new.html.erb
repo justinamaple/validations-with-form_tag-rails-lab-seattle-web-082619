@@ -24,7 +24,7 @@
     <div id="error_explanation">
       <h2>There were some errors:</h2>
       <ul>
-        <% @autho.errors.full_messages.each do |message| %>
+        <% @author.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
@@ -32,14 +32,14 @@
   <% end %>
  
  
-  <div class="field<%= ' field_with_errors' if @autho.errors[:name].any? %>">
+  <div class="field<%= ' field_with_errors' if @author.errors[:name].any? %>">
     <%= label_tag "name", "Name" %>
-    <%= text_field_tag "name", @autho.name %>
+    <%= text_field_tag "name", @author.name %>
   </div>
  
-  <div class="field<%= ' field_with_errors' if @autho.errors[:email].any? %>">
+  <div class="field<%= ' field_with_errors' if @author.errors[:email].any? %>">
     <%= label_tag "email", "Email" %>
-    <%= text_field_tag "email", @autho.email %>
+    <%= text_field_tag "email", @author.email %>
   </div>
  
   <%= submit_tag "Create" %>
