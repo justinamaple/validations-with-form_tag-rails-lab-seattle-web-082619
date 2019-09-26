@@ -39,14 +39,14 @@
   <% end %>
  
  
-  <div class="field<%= ' field_with_errors' if @person.errors[:name].any? %>">
+  <div class="field<%= ' field_with_errors' if @post.errors[:name].any? %>">
     <%= label_tag "name", "Name" %>
-    <%= text_field_tag "name", @person.name %>
+    <%= text_field_tag "name", @post.name %>
   </div>
  
-  <div class="field<%= ' field_with_errors' if @person.errors[:email].any? %>">
+  <div class="field<%= ' field_with_errors' if @post.errors[:email].any? %>">
     <%= label_tag "email", "Email" %>
-    <%= text_field_tag "email", @person.email %>
+    <%= text_field_tag "email", @post.email %>
   </div>
  
   <%= submit_tag "Create" %>
